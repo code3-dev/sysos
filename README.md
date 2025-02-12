@@ -17,16 +17,16 @@ git clone https://github.com/code3-dev/sysos.git
 cd sysos
 ```
 
-### Building the UI
-
-```bash
-npm run build:css
-```
-
 ### Install dependencies
 
 ```bash
 npm install
+```
+
+### Building the UI
+
+```bash
+npm run build:css
 ```
 
 ### Run the application
