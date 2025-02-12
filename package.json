@@ -1,0 +1,69 @@
+{
+  "name": "sysos",
+  "description": "SysOS Desktop Application",
+  "version": "1.0.0",
+  "main": "main.js",
+  "bin": "main.js",
+  "homepage": "https://sysos.vercel.app",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "build:css": "npx tailwindcss -i ./assets/core.css -o ./public/tailwind.min.css --minify"
+  },
+  "author": {
+    "name": "Hossein Pira",
+    "email": "h3dev.pira@gmail.com"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^34.0.2",
+    "electron-builder": "^25.1.8",
+    "tailwindcss": "^3.4.17"
+  },
+  "build": {
+    "appId": "com.sysos.app",
+    "productName": "SysOS",
+    "icon": "assets/icon.png",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "public/**/*",
+      "assets/**/*",
+      "preload.js",
+      "main.js",
+      "tailwind.config.js"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true,
+      "differentialPackage": true
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "System",
+      "icon": "assets/icon.png",
+      "maintainer": "h3dev.pira@gmail.com"
+    }
+  },
+  "dependencies": {
+    "systeminformation": "^5.25.11"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.min.css">
+    <title>SysOS</title>
+</head>
+
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-3xl bg-gray-800 p-6 rounded-2xl shadow-lg backdrop-blur-md bg-opacity-80">
+        <h1 class="text-3xl font-bold text-center mb-6">System Information</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">Architecture:</strong>
+                <span id="arch" class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">Platform:</strong> <span id="platform"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">Total Memory:</strong> <span id="total-mem"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">Free Memory:</strong> <span id="free-mem"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">CPU Model:</strong> <span id="cpu-info"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">CPU Usage:</strong> <span id="cpu-usage"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">CPU Cores:</strong> <span id="cpu-cores"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">System Uptime:</strong> <span id="uptime"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">OS Version:</strong> <span id="os-version"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">Home Directory:</strong> <span id="home-dir"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">User Info:</strong> <span id="user-info"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="bg-gray-700 p-4 rounded-lg shadow-md transition transform hover:scale-105">
+                <strong class="text-gray-300">GPU Info:</strong> <span id="gpu-info"
+                    class="block text-lg font-semibold">Loading...</span>
+            </div>
+            <div class="col-span-2 bg-gray-800 p-4 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold text-center mb-4">Storage Information</h2>
+                <div id="storage-info" class="space-y-4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
