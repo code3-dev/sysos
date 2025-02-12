@@ -135,7 +135,6 @@ app.on('activate', () => {
 ipcMain.handle('get-system-info', async () => {
   const cpuUsage = await si.currentLoad();
   const graphics = await si.graphics();
-  const battery = await si.battery();
   const storage = await si.fsSize();
 
   return {
